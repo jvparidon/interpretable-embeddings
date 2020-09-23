@@ -13123,7 +13123,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {"height": "501px", "width": "593px"}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {"height": "501px", "width": "593px"}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": true, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13135,9 +13135,17 @@ $( document ).ready(function(){
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Identifying-human-interpretable-latent-dimensions-in-word-embeddings" data-toc-modified-id="Identifying-human-interpretable-latent-dimensions-in-word-embeddings-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Identifying human-interpretable latent dimensions in word embeddings</a></span><ul class="toc-item"><li><span><a href="#Background" data-toc-modified-id="Background-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Background</a></span></li></ul></li><li><span><a href="#Embeddings" data-toc-modified-id="Embeddings-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Embeddings</a></span><ul class="toc-item"><li><span><a href="#Correlations-between-embedding-dimensions" data-toc-modified-id="Correlations-between-embedding-dimensions-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Correlations between embedding dimensions</a></span><ul class="toc-item"><li><span><a href="#English-Common-Crawl-correlations" data-toc-modified-id="English-Common-Crawl-correlations-2.1.1"><span class="toc-item-num">2.1.1&nbsp;&nbsp;</span>English Common Crawl correlations</a></span></li><li><span><a href="#English-OpenSubtitles-correlations" data-toc-modified-id="English-OpenSubtitles-correlations-2.1.2"><span class="toc-item-num">2.1.2&nbsp;&nbsp;</span>English OpenSubtitles correlations</a></span></li><li><span><a href="#Dutch-Common-Crawl-correlations" data-toc-modified-id="Dutch-Common-Crawl-correlations-2.1.3"><span class="toc-item-num">2.1.3&nbsp;&nbsp;</span>Dutch Common Crawl correlations</a></span></li><li><span><a href="#Dutch-OpenSubtitles-correlations" data-toc-modified-id="Dutch-OpenSubtitles-correlations-2.1.4"><span class="toc-item-num">2.1.4&nbsp;&nbsp;</span>Dutch OpenSubtitles correlations</a></span></li></ul></li></ul></li><li><span><a href="#Decompositions" data-toc-modified-id="Decompositions-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Decompositions</a></span><ul class="toc-item"><li><span><a href="#Principal-Components-Analysis" data-toc-modified-id="Principal-Components-Analysis-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Principal Components Analysis</a></span><ul class="toc-item"><li><span><a href="#English-Common-Crawl-PCA" data-toc-modified-id="English-Common-Crawl-PCA-3.1.1"><span class="toc-item-num">3.1.1&nbsp;&nbsp;</span>English Common Crawl PCA</a></span></li><li><span><a href="#English-OpenSubtitles-PCA" data-toc-modified-id="English-OpenSubtitles-PCA-3.1.2"><span class="toc-item-num">3.1.2&nbsp;&nbsp;</span>English OpenSubtitles PCA</a></span></li><li><span><a href="#Dutch-Common-Crawl-PCA" data-toc-modified-id="Dutch-Common-Crawl-PCA-3.1.3"><span class="toc-item-num">3.1.3&nbsp;&nbsp;</span>Dutch Common Crawl PCA</a></span></li><li><span><a href="#Dutch-OpenSubtitles-PCA" data-toc-modified-id="Dutch-OpenSubtitles-PCA-3.1.4"><span class="toc-item-num">3.1.4&nbsp;&nbsp;</span>Dutch OpenSubtitles PCA</a></span></li></ul></li><li><span><a href="#Factor-Analysis" data-toc-modified-id="Factor-Analysis-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Factor Analysis</a></span><ul class="toc-item"><li><span><a href="#English-Common-Crawl-FA" data-toc-modified-id="English-Common-Crawl-FA-3.2.1"><span class="toc-item-num">3.2.1&nbsp;&nbsp;</span>English Common Crawl FA</a></span></li><li><span><a href="#English-OpenSubtitles-FA" data-toc-modified-id="English-OpenSubtitles-FA-3.2.2"><span class="toc-item-num">3.2.2&nbsp;&nbsp;</span>English OpenSubtitles FA</a></span></li><li><span><a href="#Dutch-Common-Crawl-FA" data-toc-modified-id="Dutch-Common-Crawl-FA-3.2.3"><span class="toc-item-num">3.2.3&nbsp;&nbsp;</span>Dutch Common Crawl FA</a></span></li><li><span><a href="#Dutch-OpenSubtitles-FA" data-toc-modified-id="Dutch-OpenSubtitles-FA-3.2.4"><span class="toc-item-num">3.2.4&nbsp;&nbsp;</span>Dutch OpenSubtitles FA</a></span></li></ul></li><li><span><a href="#Rotated-FA-solutions" data-toc-modified-id="Rotated-FA-solutions-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Rotated FA solutions</a></span><ul class="toc-item"><li><span><a href="#Varimax-rotated-English-Common-Crawl-FA" data-toc-modified-id="Varimax-rotated-English-Common-Crawl-FA-3.3.1"><span class="toc-item-num">3.3.1&nbsp;&nbsp;</span>Varimax rotated English Common Crawl FA</a></span></li><li><span><a href="#Quartimax-rotated-English-Common-Crawl-FA" data-toc-modified-id="Quartimax-rotated-English-Common-Crawl-FA-3.3.2"><span class="toc-item-num">3.3.2&nbsp;&nbsp;</span>Quartimax rotated English Common Crawl FA</a></span></li></ul></li></ul></li><li><span><a href="#Interim-takeaways" data-toc-modified-id="Interim-takeaways-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Interim takeaways</a></span></li><li><span><a href="#Filtering-for-Age-of-Acquisition" data-toc-modified-id="Filtering-for-Age-of-Acquisition-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Filtering for Age of Acquisition</a></span><ul class="toc-item"><li><span><a href="#AoA-dataset" data-toc-modified-id="AoA-dataset-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>AoA dataset</a></span></li><li><span><a href="#AoA-filtered-PCA" data-toc-modified-id="AoA-filtered-PCA-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>AoA-filtered PCA</a></span><ul class="toc-item"><li><span><a href="#AoA-filtered-English-Common-Crawl-PCA" data-toc-modified-id="AoA-filtered-English-Common-Crawl-PCA-5.2.1"><span class="toc-item-num">5.2.1&nbsp;&nbsp;</span>AoA-filtered English Common Crawl PCA</a></span></li><li><span><a href="#AoA-filtered-English-OpenSubtitles-PCA" data-toc-modified-id="AoA-filtered-English-OpenSubtitles-PCA-5.2.2"><span class="toc-item-num">5.2.2&nbsp;&nbsp;</span>AoA-filtered English OpenSubtitles PCA</a></span></li><li><span><a href="#AoA-filtered-Dutch-Common-Crawl-PCA" data-toc-modified-id="AoA-filtered-Dutch-Common-Crawl-PCA-5.2.3"><span class="toc-item-num">5.2.3&nbsp;&nbsp;</span>AoA-filtered Dutch Common Crawl PCA</a></span></li><li><span><a href="#AoA-filtered-Dutch-OpenSubtitles-PCA" data-toc-modified-id="AoA-filtered-Dutch-OpenSubtitles-PCA-5.2.4"><span class="toc-item-num">5.2.4&nbsp;&nbsp;</span>AoA-filtered Dutch OpenSubtitles PCA</a></span></li></ul></li><li><span><a href="#AoA-filtered-FA" data-toc-modified-id="AoA-filtered-FA-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>AoA-filtered FA</a></span><ul class="toc-item"><li><span><a href="#AoA-filtered-English-Common-Crawl-FA" data-toc-modified-id="AoA-filtered-English-Common-Crawl-FA-5.3.1"><span class="toc-item-num">5.3.1&nbsp;&nbsp;</span>AoA-filtered English Common Crawl FA</a></span></li><li><span><a href="#AoA-filtered-English-OpenSubtitles-FA" data-toc-modified-id="AoA-filtered-English-OpenSubtitles-FA-5.3.2"><span class="toc-item-num">5.3.2&nbsp;&nbsp;</span>AoA-filtered English OpenSubtitles FA</a></span></li><li><span><a href="#AoA-filtered-Dutch-Common-Crawl-FA" data-toc-modified-id="AoA-filtered-Dutch-Common-Crawl-FA-5.3.3"><span class="toc-item-num">5.3.3&nbsp;&nbsp;</span>AoA-filtered Dutch Common Crawl FA</a></span></li><li><span><a href="#AoA-filtered-Dutch-OpenSubtitles-FA" data-toc-modified-id="AoA-filtered-Dutch-OpenSubtitles-FA-5.3.4"><span class="toc-item-num">5.3.4&nbsp;&nbsp;</span>AoA-filtered Dutch OpenSubtitles FA</a></span></li></ul></li><li><span><a href="#Rotated-AoA-filtered-FA-solutions" data-toc-modified-id="Rotated-AoA-filtered-FA-solutions-5.4"><span class="toc-item-num">5.4&nbsp;&nbsp;</span>Rotated AoA-filtered FA solutions</a></span><ul class="toc-item"><li><span><a href="#Varimax-rotated-AoA-filtered-English-Common-Crawl-FA" data-toc-modified-id="Varimax-rotated-AoA-filtered-English-Common-Crawl-FA-5.4.1"><span class="toc-item-num">5.4.1&nbsp;&nbsp;</span>Varimax rotated AoA-filtered English Common Crawl FA</a></span></li><li><span><a href="#Quartimax-rotated-AoA-filtered-English-Common-Crawl-FA" data-toc-modified-id="Quartimax-rotated-AoA-filtered-English-Common-Crawl-FA-5.4.2"><span class="toc-item-num">5.4.2&nbsp;&nbsp;</span>Quartimax rotated AoA-filtered English Common Crawl FA</a></span></li></ul></li></ul></li><li><span><a href="#Final-takeaways" data-toc-modified-id="Final-takeaways-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Final takeaways</a></span></li><li><span><a href="#Convert-notebook-to-HTML" data-toc-modified-id="Convert-notebook-to-HTML-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Convert notebook to HTML</a></span></li></ul></div>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -13157,9 +13165,9 @@ $( document ).ready(function(){
 
 <span class="k">def</span> <span class="nf">convert_notebook</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;html&#39;</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">output</span> <span class="o">==</span> <span class="s1">&#39;html&#39;</span><span class="p">:</span>
-        <span class="n">convert</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;jupyter nbconvert </span><span class="si">{title}</span><span class="s1">.ipynb --to </span><span class="si">{output}</span><span class="s1">_ --output </span><span class="si">{title}</span><span class="s1">.</span><span class="si">{output}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+        <span class="n">convert</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;jupyter nbconvert </span><span class="si">{title}</span><span class="s1">.ipynb --to html_toc --output </span><span class="si">{title}</span><span class="s1">.html&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">convert</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;jupyter nbconvert </span><span class="si">{title}</span><span class="s1">.ipynb --to </span><span class="si">{output}</span><span class="s1">_toc --output </span><span class="si">{title}</span><span class="s1">.</span><span class="si">{output}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+        <span class="n">convert</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;jupyter nbconvert </span><span class="si">{title}</span><span class="s1">.ipynb --to </span><span class="si">{output}</span><span class="s1"> --output </span><span class="si">{title}</span><span class="s1">.</span><span class="si">{output}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">convert</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">display_md</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Jupyter notebook `</span><span class="si">{title}</span><span class="s1">` converted successfully.&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -13722,7 +13730,7 @@ To verify that results are at least somewhat generalizable, we will analyze embe
 
 
 <div class="output_png output_subarea ">
-<img src="embedding_decomposition_files/embedding_decomposition_7_3.png"
+<img src="embedding_decomposition_files/embedding_decomposition_8_3.png"
 >
 </div>
 
@@ -14163,7 +14171,7 @@ To verify that results are at least somewhat generalizable, we will analyze embe
 
 
 <div class="output_png output_subarea ">
-<img src="embedding_decomposition_files/embedding_decomposition_9_3.png"
+<img src="embedding_decomposition_files/embedding_decomposition_10_3.png"
 >
 </div>
 
@@ -14604,7 +14612,7 @@ To verify that results are at least somewhat generalizable, we will analyze embe
 
 
 <div class="output_png output_subarea ">
-<img src="embedding_decomposition_files/embedding_decomposition_11_3.png"
+<img src="embedding_decomposition_files/embedding_decomposition_12_3.png"
 >
 </div>
 
@@ -15045,7 +15053,7 @@ To verify that results are at least somewhat generalizable, we will analyze embe
 
 
 <div class="output_png output_subarea ">
-<img src="embedding_decomposition_files/embedding_decomposition_13_3.png"
+<img src="embedding_decomposition_files/embedding_decomposition_14_3.png"
 >
 </div>
 
@@ -30254,7 +30262,7 @@ To verify that results are at least somewhat generalizable, we will analyze embe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert this Jupyter notebook</span>
